@@ -1,0 +1,685 @@
+/*Отключение дефолтных стилей*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Подключение шрифтов*/
+@font-face {
+    font-family: "Open-Sans";
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Open-Sans";
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+    font-weight: 700;
+}
+
+body {
+    min-width: 1660px;
+    font-family: "Open-Sans", "Arial", sans-serif;
+    font-weight: 400;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+.button {
+    background-color: #b59f5b;
+    border: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+}
+/*Значения focus не было в макете, но при переключением по Tab так немного лучше выглядит*/
+.button:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 4px 3px rgba(15, 16, 14, 0.1);
+    border-radius: 0;
+}
+.button:hover {
+    background-color: #323232;
+    cursor: pointer;
+    border: none;
+}
+
+.field {
+    /* Типографика */
+    vertical-align: middle;
+    font-size: 13px;
+    color: #888888;
+    font-weight: 400;
+
+    /*Оформление*/
+    border: none;
+    background-color: #f4f7f6;
+}
+.field:focus {
+    outline: thin solid #b59f5b;
+    outline-offset: -1px;
+}
+/*Скрытые описания*/
+.visually_hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    overflow: hidden;
+}
+
+/*Header*/
+.header {
+    position: relative;
+    display: block;
+    min-height: 450px;
+}
+
+.header_background {
+    position: absolute;
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+
+    background: #101d2c;
+}
+
+/*Фон баннера*/
+.header_background_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*Маска для фона баннера*/
+.header_background::after {
+    content: "";
+
+    /*Позиционирование*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #000000;
+    opacity: 0.6;
+}
+
+.header_content {
+    position: relative;
+
+    /*Блочная модель*/
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 146px;
+}
+
+.logo_and_nav {
+    /*Позиционирование*/
+    position: relative;
+    right: 0;
+    left: 0;
+
+    /*Блочная модель*/
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1200px;
+}
+
+.logo {
+    margin-left: 4px;
+    width: 180px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav_list {
+    /*Блочная модель*/
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav_item {
+    margin-left: 35px;
+}
+
+.nav_link {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.nav_link:hover {
+    text-decoration: underline;
+}
+
+.basetitle {
+    position: relative;
+    /*Блочная модель*/
+    width: 680px;
+    margin: auto;
+    margin-top: 125px;
+    /*Типографика*/
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*Основной блок*/
+.page_main_content {
+    position: relative;
+
+    /*Блочная модель*/
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+/*Статьи.*/
+.posts {
+    position: relative;
+    width: 778px;
+}
+
+.post {
+    position: relative;
+
+    /*Блочная модель*/
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1px;
+}
+.post:nth-child(n + 2) {
+    margin-top: 59px;
+}
+.post_preview {
+    position: relative;
+    display: block;
+    width: 381px;
+}
+
+.post_img{
+    z-index: 4;
+}
+
+.post_img::before {
+    content: "";
+
+    /*Позиционирование*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+
+    /*Блочная модель*/
+    width: 100%;
+    height: 100%;
+
+    background-color: #eff6f1;
+}
+.post_content {
+    width: 367px;
+    padding-bottom: 1px;
+}
+
+.post_header_category {
+    display: flex;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.category {
+    margin-right: 20px;
+
+    /*Типографика*/
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #b59f5b;
+    font-weight: 700;
+}
+
+.category:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.post_header_title {
+    margin-bottom: 16px;
+
+    /*Типографика*/
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+.post_header_title:hover {
+    color: #b59f5b;
+}
+
+.date_author {
+    margin-bottom: 34px;
+}
+
+.date {
+    margin-right: 15px;
+
+    /*Типографика*/
+    font-size: 12px;
+    color: #888888;
+    font-weight: 400;
+}
+.author {
+    font-size: 12px;
+    color: #000000;
+    font-weight: 700;
+}
+.post_text {
+    width: 367px;
+
+    /*Типографика*/
+    font-size: 15px;
+    line-height: 1.2;
+    color: #0f0d0e;
+    font-weight: 400;
+}
+
+/*Боковая панель*/
+.sidebar {
+    position: relative;
+
+    /*Блочная модель*/
+    display: block;
+    width: 272px;
+    padding: 0 1px 1px 1px;
+}
+
+.sidebar_child:nth-child(n + 2) {
+    margin-top: 60px;
+}
+
+/*Последние посты*/
+.last_posts_name_section {
+    margin-bottom: 29px;
+
+    /*Типографика*/
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+
+.last_posts_name_section::after {
+    content: "";
+
+    /*Блочная модель*/
+    display: block;
+    margin: auto;
+    margin-top: 14px;
+    width: 66px;
+    height: 3px;
+
+    background-color: #e1d9bd;
+}
+
+.last_post {
+    position: relative;
+
+    /*Блочная модель*/
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1px;
+}
+
+.last_post:nth-child(n + 3) {
+    margin-top: 22px;
+}
+
+.last_post_preview {
+    position: relative;
+
+    display: flex;
+    width: 70px;
+}
+
+.last_post_preview::after {
+    content: "";
+
+    /*Позиционирование*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+
+    /*Блочная модель*/
+    width: 100%;
+    height: 100%;
+
+    background-color: #eff6f1;
+}
+
+.last_post_img {
+    z-index: 4;
+    width: 70px;
+    object-fit: contain;
+}
+.last_post_content {
+    width: 181px;
+}
+.last_post_date {
+    display: block;
+
+    font-size: 12px;
+    color: #000000;
+    font-weight: 400;
+
+    opacity: 0.541;
+}
+
+.last_post_text {
+    /*Типографика*/
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+}
+
+/*Форма поиска*/
+.search_field {
+    /*Блочная модель*/
+    height: 49px;
+    flex: 1;
+    padding: 18px;
+}
+
+.search_group {
+    display: flex;
+    width: 100%;
+}
+
+.search_button {
+    width: 49px;
+    height: 49px;
+    margin-left: -1px;
+
+    /*Оформление*/
+    background-color: #b59f5b;
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+}
+
+/*Подписка*/
+.subscribe {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe_name_section {
+    margin-bottom: 23px;
+
+    /*Типографика*/
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+
+.subscribe_name_section::after {
+    content: "";
+
+    /*Блочная модель*/
+    display: block;
+    margin: auto;
+    margin-top: 14px;
+    width: 66px;
+    height: 3px;
+
+    background-color: #e1d9bd;
+}
+
+.subscribe_field {
+    /*Блочная модель*/
+    height: 49px;
+    margin-bottom: 16px;
+    padding: 18px;
+}
+
+.subscribe_button {
+    height: 49px;
+    font-size: 14px;
+}
+
+/*Теги*/
+.tags {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tags_name_section {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+
+.tags_name_section::after {
+    content: "";
+
+    display: block;
+    width: 66px;
+    height: 3px;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 17px;
+
+    background-color: #e1d9bd;
+}
+
+.tags_list {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.tags_item {
+    height: 29px;
+    margin-right: 5px;
+    margin-top: 6px;
+    padding: 0 14px;
+
+    border: 3px solid #ededed;
+}
+
+.tags_link {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+
+.tags_item:hover {
+    border-color: #b59f5b;
+}
+
+/*Темы*/
+.topics {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 29px;
+}
+
+.topics_name_section {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+
+.topics_name_section::after {
+    content: "";
+
+    display: block;
+    width: 66px;
+    height: 3px;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 23px;
+
+    background-color: #e1d9bd;
+}
+
+.topics_list {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.topics_item {
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 12px 1px;
+
+    border-bottom: 1px solid #ededed;
+}
+
+.topics_link {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.topics_link:hover {
+    color: #b59f5b;
+}
+.sup_text {
+    padding-left: 4px;
+
+    vertical-align: top;
+    font-size: 12px;
+    color: #b59f5b;
+    font-weight: 700;
+}
+
+/*Футер*/
+.footer {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 0 15px 41px 15px;
+}
+.footer_socials {
+    position: relative;
+
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-top: 31px;
+    padding-bottom: 31px;
+
+    background-color: #f3f7f5;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.social_item:nth-child(n + 2) {
+    margin-left: 30px;
+}
+.social_link {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-color: #f3f7f5;
+    background-position: center;
+}
+
+.social_link_dribbble {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+}
+.social_link_pinterest {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+}
+.social_link_tumblr {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+}
+
+/* Информация об авторе сайта */
+.footer_copyright {
+    position: relative;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 74px;
+}
+.copyright {
+    display: block;
+    margin: auto;
+
+    font-style: normal;
+}
+.copyright_link {
+    font-size: 12px;
+    color: #999999;
+    font-weight: 700;
+}
