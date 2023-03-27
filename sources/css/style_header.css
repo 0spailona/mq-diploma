@@ -1,0 +1,145 @@
+
+/*Header*/
+.header {
+    position: relative;
+    display: block;
+    min-height: 450px;
+}
+
+.header_background {
+    position: absolute;
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+
+    background: #101d2c;
+}
+
+/*Фон баннера*/
+.header_background_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*Маска для фона баннера*/
+.header_background::after {
+    content: "";
+
+    /*Позиционирование*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #000000;
+    opacity: 0.6;
+}
+
+.header_content {
+    position: relative;
+
+    /*Блочная модель*/
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 146px;
+}
+
+.logo_and_nav {
+    /*Позиционирование*/
+    position: relative;
+    right: 0;
+    left: 0;
+
+    /*Блочная модель*/
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1200px;
+}
+
+.logo {
+    margin-left: 4px;
+    width: 180px;
+}
+
+.nav_wrp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav_list {
+    /*Блочная модель*/
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav_item {
+    margin-left: 35px;
+}
+
+.nav_link {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.nav_link:hover {
+    text-decoration: underline;
+}
+
+.nav_burger{
+    display: none;
+    width: 23px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+#nav_burger:checked + .nav{
+    display: block;
+}
+.basetitle_and_logo{
+    max-width: 680px;
+    margin: 125px auto 0 auto;
+}
+.logo_for_mobile{
+    display: none;
+    width: 96%;
+    margin-bottom: 44px;
+}
+.basetitle {
+
+    /*Блочная модель*/
+
+    margin: auto;
+
+    /*Типографика*/
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+}

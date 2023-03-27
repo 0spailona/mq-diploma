@@ -7,21 +7,20 @@
 /*Подключение шрифтов*/
 @font-face {
     font-family: "Open-Sans";
-    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+    src: url(fonts/OpenSans-Regular.ttf) format('ttf'), url(fonts/OpenSans-Regular.woff) format('woff'),url(fonts/OpenSans-Regular.woff2) format('woff2');
     font-weight: 400;
 }
 @font-face {
     font-family: "Open-Sans";
-    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+    src: url(fonts/OpenSans-Bold.ttf) format('ttf'), url(fonts/OpenSans-Bold.woff) format('woff'),url(fonts/OpenSans-Bold.woff2) format('woff2');
     font-weight: 700;
 }
 
 body {
-    min-width: 1660px;
     font-family: "Open-Sans", "Arial", sans-serif;
     font-weight: 400;
 }
-
+/*Распространённые классы*/
 .link {
     text-decoration: none;
 }
@@ -39,7 +38,7 @@ body {
 /*Значения focus не было в макете, но при переключением по Tab так немного лучше выглядит*/
 .button:focus {
     outline: none;
-    box-shadow: inset 0px 0px 4px 3px rgba(15, 16, 14, 0.1);
+    box-shadow: inset 0 0 4px 3px rgba(15, 16, 14, 0.1);
     border-radius: 0;
 }
 .button:hover {
@@ -80,147 +79,37 @@ body {
     overflow: hidden;
 }
 
-/*Header*/
-.header {
-    position: relative;
-    display: block;
-    min-height: 450px;
-}
 
-.header_background {
-    position: absolute;
-    z-index: -2;
-
-    width: 100%;
-    height: 100%;
-
-    background: #101d2c;
-}
-
-/*Фон баннера*/
-.header_background_img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-/*Маска для фона баннера*/
-.header_background::after {
-    content: "";
-
-    /*Позиционирование*/
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 3;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: #000000;
-    opacity: 0.6;
-}
-
-.header_content {
-    position: relative;
-
-    /*Блочная модель*/
-    width: 1200px;
-    height: 100%;
-    margin: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 30px;
-    padding-bottom: 146px;
-}
-
-.logo_and_nav {
-    /*Позиционирование*/
-    position: relative;
-    right: 0;
-    left: 0;
-
-    /*Блочная модель*/
-    display: flex;
-    justify-content: space-between;
-
-    max-width: 1200px;
-}
-
-.logo {
-    margin-left: 4px;
-    width: 180px;
-}
-
-.nav {
-    display: flex;
-}
-
-.nav_list {
-    /*Блочная модель*/
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.nav_item {
-    margin-left: 35px;
-}
-
-.nav_link {
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 13px;
-    color: #ffffff;
-}
-
-.nav_link:hover {
-    text-decoration: underline;
-}
-
-.basetitle {
-    position: relative;
-    /*Блочная модель*/
-    width: 680px;
-    margin: auto;
-    margin-top: 125px;
-    /*Типографика*/
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 1.6;
-    color: #ffffff;
-    text-align: center;
-}
 
 /*Основной блок*/
-.page_main_content {
+
+.page_main_content_center {
     position: relative;
 
     /*Блочная модель*/
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
     height: 100%;
     margin: auto;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 64px;
+    padding-bottom: 84px;
+}
+.posts_and_aside{
+    position: relative;
+
+    /*Блочная модель*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
     padding-bottom: 64px;
 }
-
 /*Статьи.*/
 .posts {
     position: relative;
-    width: 778px;
+    max-width: 778px;
+    flex: 1;
 }
 
 .post {
@@ -303,7 +192,7 @@ body {
     margin-bottom: 34px;
 }
 
-.date {
+.post_date {
     margin-right: 15px;
 
     /*Типографика*/
@@ -448,7 +337,7 @@ body {
 
     /*Оформление*/
     background-color: #b59f5b;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-image: url(svg/search.svg);
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: center;
@@ -614,6 +503,109 @@ body {
     font-weight: 700;
 }
 
+/*Наши изделия*/
+
+.shop {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.shop_title {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+.shop_title::after {
+    content: "";
+
+    /*Блочная модель*/
+    display: block;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 28px;
+    width: 66px;
+    height: 3px;
+
+    background-color: #e1d9bd;
+}
+.shop_articles {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
+.shop_article {
+    display: flex;
+    flex-direction: column;
+    width: 26%;
+}
+
+.shop_img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.shop_contain {
+    position: relative;
+    top: -5px;
+    flex: 1;
+
+    padding: 25px 0 10px 0;
+
+    outline: 3px solid #b59f5b;
+    outline-offset: 20px;
+}
+
+.shop_contain_title {
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+.shop_contain_text {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #0f0d0e;
+    font-weight: 400;
+}
+
+.shop_contain_text_link {
+    color: #b59f5b;
+}
+.shop_contain_text_link:hover {
+    text-decoration: underline;
+}
+.shop_contain_price_and_button {
+    display: flex;
+    justify-content: space-between;
+}
+.shop_contain_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+}
+.shop_contain_price_old {
+    text-decoration: line-through;
+    font-size: 14px;
+}
+.shop_contain_price_new {
+    font-size: 20px;
+}
+
+.shop_contain_button {
+    width: 140px;
+    height: 48px;
+}
+
+
+
 /*Футер*/
 .footer {
     position: relative;
@@ -652,14 +644,14 @@ body {
     background-position: center;
 }
 
-.social_link_dribbble {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+.social_link_dribble {
+    background-image: url(svg/001-dribbble.svg);
 }
 .social_link_pinterest {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+    background-image: url(svg/001-pinterest.svg);
 }
 .social_link_tumblr {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+    background-image: url(svg/003-tumblr.svg);
 }
 
 /* Информация об авторе сайта */
@@ -683,3 +675,101 @@ body {
     color: #999999;
     font-weight: 700;
 }
+/* Media */
+/*
+@media (min-width: 1600px) {
+    .trends_article {
+        max-height: 320px;
+    }
+}
+@media (max-width: 1600px) and (min-width: 768px){
+
+}
+@media (max-width: 768px) and (min-width: 361px) and (orientation: portrait) {
+    .nav_wrp {
+        flex-direction: row-reverse;
+    }
+
+    .nav_burger {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .basetitle {
+        max-width: 79%;
+        font-size: 40px;
+        line-height: 1.3;
+    }
+    .trends_title {
+        font-size: 18px;
+    }
+
+    .trends_articles {
+        flex-wrap: wrap;
+    }
+    .trends_article {
+        width: 40%;
+        flex: auto;
+    }
+    .trends_article_name{
+        font-size:17px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 361px) and (orientation: landscape) {
+}
+
+@media (max-width: 360px) and (orientation: landscape) {
+    .nav_wrp {
+        flex-direction: row-reverse;
+    }
+
+    .nav_burger {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) and (orientation: portrait) {
+    .logo {
+        display: none;
+    }
+    .nav_wrp {
+        flex-direction: row-reverse;
+    }
+
+    .nav_burger {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .nav_list {
+        justify-content: flex-start;
+    }
+
+    .basetitle_and_logo {
+        width: 90%;
+    }
+    .logo_for_mobile {
+        display: block;
+    }
+    .basetitle {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .trends_title {
+        font-size: 16px;
+    }
+
+    .trends_article_name{
+        font-size:16px;
+    }
+}
+*/

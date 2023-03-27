@@ -1,26 +1,55 @@
 <!DOCTYPE html>
+<!--suppress HtmlUnknownAnchorTarget -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NOEMI</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_header.css">
+  <link rel="stylesheet" href="css/style_popup.css">
+  <link rel="stylesheet" href="css/style_trends.css">
+
+  <!-- specific screens -->
+  <link rel="stylesheet" href="css/style_mobile_portrait.css" media="screen and (max-width: 360px) and (orientation: portrait)">
+  <link rel="stylesheet" href="css/style_tablet_landscape.css" media="screen and (max-width: 360px) and (orientation: landscape)">
+  <link rel="stylesheet" href="css/style_tablet_portrait.css" media="screen and (max-width: 768px) and (min-width: 361px) and (orientation: portrait)">
+  <link rel="stylesheet" href="css/style_tablet_landscape.css" media="screen and (max-width: 768px) and (min-width: 361px) and (orientation: landscape)">
+  <link rel="stylesheet" href="css/style_over1660.css" media="screen and (min-width: 1600px)">
+  <link rel="stylesheet" href="css/style_768-1660.css" media="screen and (max-width: 1600px) and (min-width: 768px)">
 </head>
 <body>
 <!-- Header -->
 <header class="header">
 
   <!-- Замена фона баннера через HTML -->
-  <div class="header_background">
+  <!--<div class="header_background">
     <img class="header_background_img" src="https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg" alt="Девушка на скале в позе из йоги">
-  </div>
+  </div>-->
+
+  <picture class="header_background">
+    <source media="(max-width:360px)" srcset="img/banner-mobile.jpg">
+    <source media="(max-width:768px) and (min-width:361px)" srcset="img/banner-bg-tablet.jpg">
+    <source media="(min-width:769px)" srcset="img/banner-bg.jpg">
+    <img class="header_background_img" src="img/banner-bg.jpg" alt="Девушка на скале в позе из йоги">
+  </picture>
   <div class="header_content">
 
     <!-- Логотип -->
     <div class="logo_and_nav">
-      <a href="noemy.html" class="link"><img class="logo" src="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg" alt="NOEMI"></a>
+      <a href="index.html" class="link"><img class="logo" src="svg/noemi-logo.svg" alt="NOEMI"></a>
 
       <!-- Меню -->
+
+      <!-- Бургер -->
+      <div class="nav_wrp">
+      <label for="nav_burger"><svg class="nav_burger" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12H20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M5 19H20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M5 5H20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      </svg></label>
+        <input type="checkbox" class="visually_hidden" id="nav_burger">
+
       <nav class="nav">
         <ul class="nav_list list">
           <li class="nav_item">
@@ -43,22 +72,87 @@
           </li>
         </ul>
       </nav>
+      </div>
     </div>
+
     <!-- Заголовок -->
-    <h1 class="basetitle">Блог о творчестве, спорте,
+    <div class="basetitle_and_logo">
+      <a href="index.html" class="link">
+        <img class="logo_for_mobile" src="svg/noemi-logo.svg" alt="NOEMI"></a>
+
+      <h1 class="basetitle">Блог о творчестве, спорте,
       и образе жизни</h1>
+    </div>
   </div>
 </header>
 
+
+
 <!-- Основое содержание блога -->
-<div class="page_main_content">
+-<!-- Тренды -->
+<section class="trends">
+  <h2 class="trends_title">Сейчас в тренде</h2>
+  <div class="trends_articles">
+
+    <!-- Статья 1 -->
+    <article class="trends_article" style="background-image: url(img/trend1.jpg);">
+
+      <div class="trends_article_categories_and_name">
+        <div class="trends_article_categories">
+          <a class="trends_article_category category link" href="#0">Lifestyle </a>
+          <a class="trends_article_category category link" href="#0">INTERIOR</a>
+        </div>
+        <h3 class="trends_article_name_h3"><a class="trends_article_name article_title link" href="#0">Сейчас в тренде: сад на подоконнике</a></h3>
+      </div>
+    </article>
+
+    <!-- Статья 2 -->
+    <article class="trends_article trend_2" style="background-image: url(img/trend2.jpg);">
+
+      <div class="trends_article_categories_and_name">
+        <div class="trends_article_categories">
+          <a class="trends_article_category category link" href="#0">Food</a>
+        </div>
+        <h3><a class="trends_article_name article_title link" href="#0">сыры на красивых  картинках из интернета: какие они на вкус?</a></h3>
+      </div>
+    </article>
+    <!-- Статья 3 -->
+    <article class="trends_article trend_3" style="background-image: url(img/trend3.jpg);">
+
+      <div class="trends_article_categories_and_name" >
+        <div class="trends_article_categories">
+          <a class="trends_article_category category link" href="#0">Lifestyle</a>
+          <a class="trends_article_category category link" href="#0">tRAVEL</a>
+        </div>
+        <h3><a class="trends_article_name article_title link" href="#0">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</a></h3>
+      </div>
+    </article>
+
+    <!-- Статья 4 -->
+    <article class="trends_article trend_4" style="background-image: url(img/trend4.jpg);">
+
+      <div class="trends_article_categories_and_name">
+        <div class="trends_article_categories">
+          <a class="trends_article_category category link" href="#0">food</a>
+          <a class="trends_article_category category link" href="#0">health</a>
+        </div>
+        <h3><a class="trends_article_name article_title link" href="#0">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</a></h3>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="page_main_content_center">
   <!-- Статьи -->
+  <div class="posts_and_aside">
   <main class="posts">
+
     <!-- Статья 1 -->
     <article class="post">
       <!-- Preview -->
       <div class="post_preview">
-        <img class="post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="Человек на берегу моря на рассвете">
+        <img class="post_img" src="img/last-post1.jpg" alt="Человек на берегу моря на рассвете">
       </div>
       <!-- Content -->
       <div class="post_content">
@@ -73,7 +167,7 @@
           </h3>
           <!-- Дата и автор -->
           <div class="date_author">
-            <time class="date" datetime="2019-06-10">10 июня 2019
+            <time class="post_date" datetime="2019-06-10">10 июня 2019
             </time>
             <span class="author">Неизвестный автор</span>
           </div>
@@ -92,7 +186,7 @@
     <article class="post">
       <!-- Preview -->
       <div class="post_preview">
-        <img class="post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post2.jpg" alt="Девушка в позе из йоги">
+        <img class="post_img" src="img/last-post2.jpg" alt="Девушка в позе из йоги">
       </div>
       <!-- Content -->
       <div class="post_content">
@@ -122,7 +216,7 @@
     <article class="post">
       <!-- Preview -->
       <div class="post_preview">
-        <img class="post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post3.jpg" alt="Танцующая девушка">
+        <img class="post_img" src="img/last-post3.jpg" alt="Танцующая девушка">
       </div>
       <!-- Content -->
       <div class="post_content">
@@ -153,7 +247,7 @@
     <article class="post">
       <!-- Preview -->
       <div class="post_preview">
-        <img class="post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="Сервированный стол">
+        <img class="post_img" src="img/last-post4.jpg" alt="Сервированный стол">
       </div>
       <!-- Content -->
       <div class="post_content">
@@ -184,7 +278,7 @@
     <article class="post">
       <!-- Preview -->
       <div class="post_preview">
-        <img class="post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post5.jpg" alt="Подушка с принтом">
+        <img class="post_img" src="img/last-post5.jpg" alt="Подушка с принтом">
       </div>
       <!-- Content -->
       <div class="post_content">
@@ -211,67 +305,6 @@
         </div>
       </div>
     </article>
-
-    <!--Статья 6-->
-    <article class="post">
-      <!-- Preview -->
-      <div class="post_preview">
-        <img class="post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post6.jpg" alt="Люди в горах">
-      </div>
-      <!-- Content -->
-      <div class="post_content">
-        <header class="post_header">
-          <!-- Теги -->
-          <ul class="post_header_category list">
-            <li><a href="#0" class="category link">Travel</a></li>
-            <li><a href="#0" class="category link">Lifestyle</a></li>
-          </ul>
-          <h3 class="post_header_title">
-            <a class="post_header_title link" href="#0">Как первый раз отправиться в горы?</a>
-          </h3>
-          <!-- Дата и автор -->
-          <div class="date_author">
-            <time class="post_date" datetime="2019-06-10">10 июня 2019
-            </time>
-            <span class="author">Неизвестный автор</span>
-          </div>
-        </header>
-        <div class="post_text">
-          <p>Для начала нужно определиться, в каком формате пройдёт ваше путешествие.
-            Это зависит от многих факторов, не только от ваших желаний и интересов.</p>
-        </div>
-      </div>
-    </article>
-
-    <!--Статья 7-->
-    <article class="post">
-      <!-- Preview -->
-      <div class="post_preview">
-        <img class="post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="Сервированный стол">
-      </div>
-      <!-- Content -->
-      <div class="post_content">
-        <header class="post_header">
-          <!-- Теги -->
-          <ul class="post_header_category list">
-            <li><a href="#0" class="category link">Lifestyle</a></li>
-            <li><a href="#0" class="category link">Food</a></li>
-          </ul>
-          <h3 class="post_header_title">
-            <a class="post_header_title link" href="#0">Наукоёмкий подход к кулинарии</a>
-          </h3>
-          <!-- Дата и автор -->
-          <div class="date_author">
-            <time class="post_date" datetime="2019-06-10">10 июня 2019
-            </time>
-            <span class="author">Неизвестный автор</span>
-          </div>
-        </header>
-        <div class="post_text">
-          <p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику,химию и микробиологию еды.</p>
-        </div>
-      </div>
-    </article>
   </main>
 
   <!-- Боковая панель-->
@@ -283,7 +316,7 @@
       <div class="last_post">
         <!-- Preview -->
         <div class="last_post_preview">
-          <img class="last_post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/2.jpg" alt="Рассвет на пляже">
+          <img class="last_post_img" src="img/2.jpg" alt="Рассвет на пляже">
         </div>
         <!-- Content -->
         <div class="last_post_content">
@@ -296,7 +329,7 @@
       <div class="last_post">
         <!-- Preview -->
         <div class="last_post_preview">
-          <img class="last_post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/151.jpg" alt="Девушка в позе из йоги">
+          <img class="last_post_img" src="img/151.jpg" alt="Девушка в позе из йоги">
         </div>
         <!-- Content -->
         <div class="last_post_content">
@@ -309,7 +342,7 @@
       <div class="last_post">
         <!-- Preview -->
         <div class="last_post_preview">
-          <img class="last_post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/45.jpg" alt="Кресло в комнате">
+          <img class="last_post_img" src="img/45.jpg" alt="Кресло в комнате">
         </div>
         <!-- Content -->
         <div class="last_post_content">
@@ -322,7 +355,7 @@
       <div class="last_post">
         <!-- Preview -->
         <div class="last_post_preview">
-          <img class="last_post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/501.jpg" alt="Сервированный стол">
+          <img class="last_post_img" src="img/501.jpg" alt="Сервированный стол">
         </div>
         <!-- Content -->
         <div class="last_post_content">
@@ -336,7 +369,7 @@
       <div class="last_post">
         <!-- Preview -->
         <div class="last_post_preview">
-          <img class="last_post_img" src="https://netology-code.github.io/html-2-diploma/sources/images/7.jpg" alt="Девушки  с длинными волосами">
+          <img class="last_post_img" src="img/7.jpg" alt="Девушки  с длинными волосами">
         </div>
         <!-- Content -->
         <div class="last_post_content">
@@ -422,13 +455,133 @@
   </aside>
 </div>
 
+  <!--Наши изделия-->
+  <section class="shop">
+    <h2 class="shop_title">Наши изделия</h2>
+    <div class="shop_articles">
+      <!--Статья 1-->
+      <article class="shop_article">
+       <!-- <img class="shop_img" src="img/shop-item-desk1.jpg" alt="Рассада">-->
+        <picture class="shop_img">
+          <source media="(max-width:360px)" srcset="img/shop-item-mobile1.jpg">
+          <source media="(max-width:768px) and (min-width:361px)" srcset="img/shop-item-tablet1.jpg">
+          <source media="(min-width:769px)" srcset="img/shop-item-desk1.jpg">
+          <img class="shop_img" src="img/shop-item-desk1.jpg" alt="Подушка с принтом">
+        </picture>
+        <div class="shop_contain">
+          <h3 class="shop_contain_title">Подушки на диван</h3>
+          <p class="shop_contain_text">Набор из двух подушек с модными принтами. Видео о создании <a class="shop_contain_text_link link">здесь</a>.</p>
+          <div class="shop_contain_price_and_button">
+            <div class="shop_contain_price">
+              <span class="shop_contain_price_old">1000 Р</span>
+              <span class="shop_contain_price_new">800 Р</span>
+            </div>
+            <button type="submit" class="shop_contain_button button">В магазин </button>
+          </div>
+        </div>
+      </article>
+
+      <!--Статья 2-->
+      <article class="shop_article">
+        <picture class="shop_img">
+          <source media="(max-width:360px)" srcset="img/shop-item-mobile2.jpg">
+          <source media="(max-width:768px) and (min-width:361px)" srcset="img/shop-item-tablet2.jpg">
+          <source media="(min-width:769px)" srcset="img/shop-item-desk2.jpg">
+          <img class="shop_img" src="img/shop-item-desk2.jpg" alt="Кукла Зайчик">
+        </picture>
+        <div class="shop_contain">
+          <h3 class="shop_contain_title">Кукла «Зайчик»</h3>
+          <p class="shop_contain_text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="shop_contain_text_link link">весенняя серия постов</a> в блоге и несколько подкастов.</p>
+          <div class="shop_contain_price_and_button">
+            <div class="shop_contain_price">
+              <span class="shop_contain_price_old visually_hidden">500 Р</span>
+              <span class="shop_contain_price_new">3500 Р</span>
+            </div>
+            <button type="submit" class="shop_contain_button button">В магазин </button>
+          </div>
+        </div>
+      </article>
+
+      <!--Статья 3-->
+      <article class="shop_article">
+        <picture class="shop_img">
+          <source media="(max-width:360px)" srcset="img/shop-item-mobile3.jpg">
+          <source media="(max-width:768px) and (min-width:361px)" srcset="img/shop-item-tablet3.jpg">
+          <source media="(min-width:769px)" srcset="img/shop-item-desk3.jpg">
+          <img class="shop_img" src="img/shop-item-desk3.jpg" alt="Шестиугольная рамка">
+        </picture>
+        <div class="shop_contain">
+          <h3 class="shop_contain_title">Шестиугольная рамка</h3>
+          <p class="shop_contain_text">Необычная рамка для украшения дома из видео  <a class="shop_contain_text_link link">«Как сделать рамку из подручных средств за 30 минут» </a></p>
+          <div class="shop_contain_price_and_button">
+            <div class="shop_contain_price">
+              <span class="shop_contain_price_old">1000 Р</span>
+              <span class="shop_contain_price_new">800 Р</span>
+            </div>
+            <button type="submit" class="shop_contain_button button">В магазин </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</div>
+
+<!--Pop-up -->
+<section class="popup visually_hidden">
+  <div class="popup__container">
+    <h2 class="popup_name">Ваш фидбек</h2>
+
+    <!--Pop-up Форма -->
+    <form class="popup_forms">
+      <!--Pop-up Частота посещения-->
+      <div class="frequency_of_visits popup_form">
+        <label for="visits" class="frequency_of_visits_select_label">Как часто вы заходите на сайт?</label>
+        <div class="select_and_arrow field">
+          <select name="visits" id="visits" class="frequency_of_visits_select field">
+            <option value="Almost every day">Почти каждый день</option>
+          </select>
+          <div class="select_arrow_wrapper">
+            <svg class="select_arrow" viewBox="0 0 174 296" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M86.944.389l75.297 130.417H11.648L86.944.389zM86.945 296L11.648 165.583h150.593L86.944 296z" fill="#B59F5B" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!--Pop-up Вопрос про рассылку-->
+      <fieldset class="popup_radio popup_form">
+        <legend class="popup_radio_legend">Вы подписаны на e-mail рассылку?</legend>
+        <div class="popup_radio_group">
+          <input type="radio" name="mailing" class="radio visually_hidden" id="radio_Y" value="Y" checked>
+          <label class="radio_text" for="radio_Y">Да</label>
+          <input type="radio" name="mailing" class="radio visually_hidden" id="radio_N" value="N">
+          <label class="radio_text" for="radio_N">Нет</label>
+        </div>
+      </fieldset>
+      <!--Pop-up Пожелания-->
+      <div class="popup_textarea popup_form">
+        <label for="textarea_for_wishes">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+        <textarea id="textarea_for_wishes" name="textarea_for_wishes" class="textarea_field field">Может, больше рецептов</textarea>
+      </div>
+
+      <button class="popup_submit_button button" type="submit">отправить</button>
+    </form>
+
+    <!--Pop-up Кнопка для закрывания фрейма-->
+    <button class="popup_close" type="button">
+      <svg class ="popup_close_svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 441 441"><path fill="#fff" stroke="#000" d="M220.336 170.564l.353.353.354-.353L390.288 1.318l49.796 49.773-169.269 169.245-.353.354.353.354 169.269 169.245-49.796 49.796-169.245-169.269-.354-.353-.353.353-169.27 169.269-49.748-49.796 169.245-169.245.353-.354-.353-.354L1.318 51.067 51.09 1.318l169.246 169.246z"/></svg></button>
+  </div>
+
+</section>
+
 <!-- Футер -->
 <footer class="footer">
   <!-- Контакты -->
   <div class="footer_socials">
     <ul class="socials list">
       <li class="social_item">
-        <a href="#0" class="social_link social_link_dribbble link"><span class="visually_hidden">dribbble</span></a>
+        <a href="#0" class="social_link social_link_dribble link"><span class="visually_hidden">dribble</span></a>
       </li>
       <li class="social_item">
         <a href="#0" class="social_link social_link_pinterest link"><span class="visually_hidden">pinterest</span></a>

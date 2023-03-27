@@ -1,0 +1,11 @@
+
+    .nav_wrp {
+        flex-direction: row-reverse;
+    }
+
+    .nav_burger {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
