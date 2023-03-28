@@ -1,108 +1,152 @@
 
-    .logo {
-        display: none;
-    }
-    .nav_wrp {
-        flex-direction: row-reverse;
-    }
+.logo {
+    display: none;
+}
 
-    .nav_burger {
-        display: block;
-    }
-    .nav {
-        display: none;
-    }
-    .nav_list {
-        justify-content: flex-start;
-    }
+.nav_wrp {
+    flex-direction: row-reverse;
+}
 
-    .basetitle_and_logo {
-        width: 90%;
-    }
-    .logo_for_mobile {
-        display: block;
-    }
-    .basetitle {
-        font-size: 26px;
-        line-height: 1.3;
-    }
+.nav_burger {
+    display: block;
+}
 
-    /* Тренды */
+.nav {
+    display: none;
+}
 
-    .trends{
-        padding-top: 45px;
-    }
-    .trends_title {
-        font-size: 16px;
-    }
-    .trends_articles {
-        flex-direction: column;
-    }
-    .trends_article {
-        width: 100%;
-        flex: auto;
-    }
-    .trends_article_name{
-        font-size:16px;
-    }
+.nav_list {
+    justify-content: flex-start;
+}
 
-/*Посты и sidebar*/
-    .posts_and_aside{
-        flex-direction: column;
-    }
-    /* Посты */
-    .posts{
-        width: 100%;
-        flex: auto;
-    }
+.basetitle_and_logo {
+    width: 90%;
+}
 
-    .post {
-        flex-direction: column;
-        flex:auto;
-        gap: 15px;
-    }
-    .post_preview{
-        width: 100%;
-    }
-    .post_content{
-        width: 100%;
-    }
-    .post_header_title{
-        font-size: 16px;
-    }
+.logo_for_mobile {
+    display: block;
+}
 
-    .post::after {
-        display: block;
-    }
+.basetitle {
+    font-size: 26px;
+    line-height: 1.3;
+}
 
-    .post:nth-child(n + 2) {
-        margin-top: 35px;
-    }
-    .post_text {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-/* Sidebar */
-    .sidebar {
-        margin-top: 45px;
-        margin-left: 0;
-        width: 100%;
-    }
-    .sidebar_child:nth-child(n + 2) {
-        margin-top: 44px;
-    }
-.last_posts_name_section, .subscribe_name_section, .tags_name_section, .topics_name_section{
+/* Тренды */
+
+.trends {
+    padding-top: 45px;
+}
+
+.trends_title {
     font-size: 16px;
 }
 
-    /* Наши изделия */
+.trends_articles {
+    flex-direction: column;
+}
 
-    .shop_articles {
-        flex-direction: column;
-    }
-    .shop_article {
-        width: 100%;
-    }
-    .shop_article:nth-child(n+2){
-        margin-top: 42px;
-    }
+.trends_article {
+    width: 100%;
+    flex: auto;
+}
+
+.trends_article_name {
+    font-size: 16px;
+}
+
+/*Посты и sidebar*/
+.posts_and_aside {
+    flex-direction: column;
+    padding-bottom: 19px;
+}
+
+/* Посты */
+.posts {
+    width: 100%;
+    flex: auto;
+}
+
+.post {
+    flex-direction: column;
+    flex: auto;
+    gap: 15px;
+}
+
+.post_preview {
+    width: 100%;
+}
+
+.post_content {
+    width: 100%;
+}
+
+.post_header_title {
+    font-size: 16px;
+}
+
+.post::after {
+    display: block;
+}
+
+.post:nth-child(n + 2) {
+    margin-top: 35px;
+}
+
+.post_text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Sidebar */
+.sidebar {
+    margin-top: 45px;
+    margin-left: 0;
+    width: 100%;
+}
+
+.sidebar_child:nth-child(n + 2) {
+    margin-top: 44px;
+}
+
+.last_posts_name_section, .subscribe_name_section, .tags_name_section, .topics_name_section {
+    font-size: 16px;
+}
+
+/* Наши изделия */
+
+.shop_articles {
+    flex-direction: column;
+}
+
+.shop_article {
+    width: 100%;
+}
+
+.shop_article:nth-child(n+2) {
+    margin-top: 42px;
+}
+
+/* Popup */
+.popup {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.popup__container {
+    width: 92%;
+    padding-top: 28px;
+    padding-bottom: 30px;
+}
+
+.popup_name {
+    font-size: 16px;
+}
+
+.popup_close {
+    top: -40px;
+}
+
+.popup_close_svg {
+    width: 26px;
+}

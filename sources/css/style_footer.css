@@ -1,0 +1,68 @@
+/*Футер*/
+.footer {
+    position: relative;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 0 15px 41px 15px;
+}
+
+.footer_socials {
+    position: relative;
+
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-top: 31px;
+    padding-bottom: 31px;
+
+    background-color: #f3f7f5;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.social_item:nth-child(n + 2) {
+    margin-left: 30px;
+}
+
+.social_link {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-color: #f3f7f5;
+    background-position: center;
+}
+
+.social_link > img {
+    font-size: 0.7rem;
+}
+
+/* Информация об авторе сайта */
+.footer_copyright {
+    position: relative;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 74px auto 0;
+}
+
+.copyright {
+    display: block;
+    margin: auto;
+
+    font-style: normal;
+}
+
+.copyright_link {
+    font-size: 12px;
+    color: #999999;
+    font-weight: 700;
+}
