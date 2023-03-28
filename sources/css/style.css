@@ -120,17 +120,39 @@ body {
     justify-content: space-between;
     padding-bottom: 1px;
 }
+
+.post:not(:last-child)::after {
+    content: "";
+
+    /*Блочная модель*/
+    display: none;
+    width: 100%;
+    height: 3px;
+
+    background-color: #eeeeee;
+}
+.post::after {
+    content: "";
+
+    /*Блочная модель*/
+    display: none;
+    width: 100%;
+    height: 3px;
+
+    background-color: #eeeeee;
+}
 .post:nth-child(n + 2) {
     margin-top: 59px;
 }
 .post_preview {
     position: relative;
     display: block;
-    width: 381px;
+    width: 49%;
 }
 
 .post_img{
     z-index: 4;
+    width: 100%;
 }
 
 .post_img::before {
@@ -149,7 +171,8 @@ body {
     background-color: #eff6f1;
 }
 .post_content {
-    width: 367px;
+    z-index: 4;
+    width: 47%;
     padding-bottom: 1px;
 }
 
@@ -206,7 +229,7 @@ body {
     font-weight: 700;
 }
 .post_text {
-    width: 367px;
+    width: 100%;
 
     /*Типографика*/
     font-size: 15px;
@@ -220,8 +243,9 @@ body {
     position: relative;
 
     /*Блочная модель*/
-    display: block;
+    flex-shrink: 0;
     width: 272px;
+    margin-left: 34px;
     padding: 0 1px 1px 1px;
 }
 
@@ -271,7 +295,7 @@ body {
     position: relative;
 
     display: flex;
-    width: 70px;
+    width: 25%;
 }
 
 .last_post_preview::after {
@@ -292,11 +316,12 @@ body {
 
 .last_post_img {
     z-index: 4;
-    width: 70px;
+    width: 100%;
+    vmargin-right: 18px;
     object-fit: contain;
 }
 .last_post_content {
-    width: 181px;
+    width: 67%;
 }
 .last_post_date {
     display: block;
@@ -337,7 +362,7 @@ body {
 
     /*Оформление*/
     background-color: #b59f5b;
-    background-image: url(svg/search.svg);
+    background-image: url(../svg/search.svg);
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: center;
@@ -533,7 +558,7 @@ body {
 .shop_articles {
     display: flex;
     justify-content: space-between;
-    gap: 10%;
+    vgap: 10%;
 }
 .shop_article {
     display: flex;
@@ -609,7 +634,7 @@ body {
 /*Футер*/
 .footer {
     position: relative;
-    width: 1200px;
+    max-width: 1200px;
     height: 100%;
     margin: auto;
     padding: 0 15px 41px 15px;
@@ -645,13 +670,13 @@ body {
 }
 
 .social_link_dribble {
-    background-image: url(svg/001-dribbble.svg);
+    background-image: url(../svg/001-dribbble.svg);
 }
 .social_link_pinterest {
-    background-image: url(svg/001-pinterest.svg);
+    background-image: url(../svg/001-pinterest.svg);
 }
 .social_link_tumblr {
-    background-image: url(svg/003-tumblr.svg);
+    background-image: url(../svg/003-tumblr.svg);
 }
 
 /* Информация об авторе сайта */
