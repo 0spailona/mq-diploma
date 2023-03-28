@@ -1,4 +1,5 @@
-Edited by Daria
+[Ссылка на github pages](https://0spailona.github.io/mq-diploma/sources/)
+
 
 # Дипломный проект курса «Адаптивная и мобильная вёрстка»
 
