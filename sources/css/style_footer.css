@@ -40,7 +40,7 @@
     background-position: center;
 }
 
-.social_link > img {
+.social_link_image {
     font-size: 0.7rem;
 }
 
@@ -55,7 +55,6 @@
 }
 
 .copyright {
-    display: block;
     margin: auto;
 
     font-style: normal;

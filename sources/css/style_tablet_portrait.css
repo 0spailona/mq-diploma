@@ -41,7 +41,7 @@
 }
 
 /*Посты*/
-.posts_and_aside {
+.wrp_posts_and_aside {
     padding-bottom: 50px;
 }
 
@@ -63,12 +63,12 @@
     font-size: 17px;
 }
 
-.post:not(:last-child)::after {
+.post_after::after {
     display: block;
 }
 
-.post:nth-child(n + 2) {
-    margin-top: 42px;
+.post_bottom {
+    margin-bottom: 42px;
 }
 
 /* Наши изделия */
@@ -76,15 +76,15 @@
     flex-wrap: wrap;
 }
 
-.shop_article {
+.shop_article_wrp {
     width: 45%;
 }
 
-.shop_article:nth-child(n+3) {
+.shop_article_wrp:nth-child(n+3) {
     margin-top: 42px;
 }
 
-.shop_article:nth-child(2n+2) {
+.shop_article_wrp:nth-child(2n+2) {
     margin-left: 45px;
 }
 
@@ -98,6 +98,6 @@
     top: -40px;
 }
 
-.popup_close_svg {
+.popup_close_image {
     width: 26px;
 }

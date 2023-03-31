@@ -19,7 +19,7 @@
     justify-content: flex-start;
 }
 
-.basetitle_and_logo {
+.wrp_basetitle_and_logo {
     width: 90%;
 }
 
@@ -56,7 +56,7 @@
 }
 
 /*Посты и sidebar*/
-.posts_and_aside {
+.wrp_posts_and_aside {
     flex-direction: column;
     padding-bottom: 19px;
 }
@@ -85,12 +85,12 @@
     font-size: 16px;
 }
 
-.post::after {
+.post_after::after {
     display: block;
 }
 
-.post:nth-child(n + 2) {
-    margin-top: 35px;
+.post_bottom {
+    margin-bottom: 35px;
 }
 
 .post_text {
@@ -109,7 +109,7 @@
     margin-top: 44px;
 }
 
-.last_posts_name_section, .subscribe_name_section, .tags_name_section, .topics_name_section {
+.sidebar_child_title {
     font-size: 16px;
 }
 
@@ -119,11 +119,11 @@
     flex-direction: column;
 }
 
-.shop_article {
+.shop_article_wrp {
     width: 100%;
 }
 
-.shop_article:nth-child(n+2) {
+.shop_article_wrp:nth-child(n+2) {
     margin-top: 42px;
 }
 
@@ -148,6 +148,6 @@
     top: -40px;
 }
 
-.popup_close_svg {
+.popup_close_image {
     width: 26px;
 }

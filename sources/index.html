@@ -26,6 +26,7 @@
         rel="stylesheet">
 </head>
 <body>
+<div class="main_page">
 <!-- Header -->
 <header class="header">
 
@@ -40,7 +41,7 @@
   <div class="header_content">
 
     <!-- Логотип -->
-    <div class="logo_and_nav">
+    <div class="wrp_logo_and_nav">
       <a class="link" href="index.html"><img alt="NOEMI" class="logo" src="svg/noemi-logo.svg"></a>
 
       <!-- Меню -->
@@ -82,7 +83,7 @@
     </div>
 
     <!-- Заголовок -->
-    <div class="basetitle_and_logo">
+    <div class="wrp_basetitle_and_logo">
       <a class="link" href="index.html">
         <img alt="NOEMI" class="logo_for_mobile" src="svg/noemi-logo.svg"></a>
 
@@ -102,7 +103,7 @@
     <!-- Статья 1 -->
     <article class="trends_article" style="background-image: url(img/trend1.jpg);">
 
-      <div class="trends_article_categories_and_name">
+      <div class="trends_article_wrp_categories_and_name">
         <div class="trends_article_categories">
           <a class="trends_article_category category link" href="#0">Lifestyle </a>
           <a class="trends_article_category category link" href="#0">INTERIOR</a>
@@ -114,7 +115,7 @@
     <!-- Статья 2 -->
     <article class="trends_article trend_2" style="background-image: url(img/trend2.jpg);">
 
-      <div class="trends_article_categories_and_name">
+      <div class="trends_article_wrp_categories_and_name">
         <div class="trends_article_categories">
           <a class="trends_article_category category link" href="#0">Food</a>
         </div>
@@ -125,7 +126,7 @@
     <!-- Статья 3 -->
     <article class="trends_article trend_3" style="background-image: url(img/trend3.jpg);">
 
-      <div class="trends_article_categories_and_name">
+      <div class="trends_article_wrp_categories_and_name">
         <div class="trends_article_categories">
           <a class="trends_article_category category link" href="#0">Lifestyle</a>
           <a class="trends_article_category category link" href="#0">tRAVEL</a>
@@ -137,7 +138,7 @@
     <!-- Статья 4 -->
     <article class="trends_article trend_4" style="background-image: url(img/trend4.jpg);">
 
-      <div class="trends_article_categories_and_name">
+      <div class="trends_article_wrp_categories_and_name">
         <div class="trends_article_categories">
           <a class="trends_article_category category link" href="#0">food</a>
           <a class="trends_article_category category link" href="#0">health</a>
@@ -150,13 +151,15 @@
   </div>
 </section>
 
-<div class="post_and_aside_wrp">
+<!-- Main block -->
+<div class="main_block">
+
   <!-- Статьи -->
-  <div class="posts_and_aside">
+  <div class="wrp_posts_and_aside">
     <main class="posts">
 
       <!-- Статья 1 -->
-      <article class="post">
+      <article class="post post_after post_bottom">
         <!-- Preview -->
         <div class="post_preview">
           <img alt="Человек на берегу моря на рассвете" class="post_img" src="img/last-post1.jpg">
@@ -191,7 +194,7 @@
       </article>
 
       <!--Статья 2-->
-      <article class="post">
+      <article class="post post_after post_bottom">
         <!-- Preview -->
         <div class="post_preview">
           <img alt="Девушка в позе из йоги" class="post_img" src="img/last-post2.jpg">
@@ -222,7 +225,7 @@
       </article>
 
       <!--Статья 3-->
-      <article class="post">
+      <article class="post post_after post_bottom">
         <!-- Preview -->
         <div class="post_preview">
           <img alt="Танцующая девушка" class="post_img" src="img/last-post3.jpg">
@@ -253,7 +256,7 @@
       </article>
 
       <!--Статья 4-->
-      <article class="post">
+      <article class="post post_after post_bottom">
         <!-- Preview -->
         <div class="post_preview">
           <img alt="Сервированный стол" class="post_img" src="img/last-post4.jpg">
@@ -320,7 +323,7 @@
     <aside class="sidebar">
       <!--Новые посты -->
       <section class="sidebar_child last_posts">
-        <h2 class="last_posts_name_section">Новые посты</h2>
+        <h2 class="sidebar_child_title last_posts_name_section ">Новые посты</h2>
         <!-- Новый пост 1 -->
         <div class="last_post">
           <!-- Preview -->
@@ -336,7 +339,7 @@
           </div>
         </div>
         <!--Новый пост 2-->
-        <div class="last_post">
+        <div class="last_post last_post_margin_top">
           <!-- Preview -->
           <div class="last_post_preview">
             <img alt="Девушка в позе из йоги" class="last_post_img" src="img/151.jpg">
@@ -349,7 +352,7 @@
           </div>
         </div>
         <!-- Новый пост 3-->
-        <div class="last_post">
+        <div class="last_post last_post_margin_top">
           <!-- Preview -->
           <div class="last_post_preview">
             <img alt="Кресло в комнате" class="last_post_img" src="img/45.jpg">
@@ -363,7 +366,7 @@
           </div>
         </div>
         <!--Новый пост 4 -->
-        <div class="last_post">
+        <div class="last_post last_post_margin_top">
           <!-- Preview -->
           <div class="last_post_preview">
             <img alt="Cтол с едой" class="last_post_img" src="img/501.jpg">
@@ -377,7 +380,7 @@
           </div>
         </div>
         <!--Новый пост 5 -->
-        <div class="last_post">
+        <div class="last_post last_post_margin_top">
           <!-- Preview -->
           <div class="last_post_preview">
             <img alt="Девушки  с длинными волосами" class="last_post_img" src="img/7.jpg">
@@ -406,7 +409,7 @@
 
       <!--Подписка -->
       <form class="sidebar_child subscribe">
-        <h2 class="subscribe_name_section"> Рассылка</h2>
+        <h2 class="sidebar_child_title subscribe_name_section"> Рассылка</h2>
 
         <label class="visually_hidden" for="subscribe">Форма поиска</label>
         <input class="subscribe_field field" id="subscribe" name="subscribe" placeholder="Ваш email-адрес" required
@@ -416,7 +419,7 @@
 
       <!--теги -->
       <section class="sidebar_child tags">
-        <h2 class="tags_name_section"> теги</h2>
+        <h2 class="sidebar_child_title tags_name_section"> теги</h2>
         <ul class="tags_list list">
           <li class="tags_item">
             <a class="tags_link link" href="#0">Fashion</a>
@@ -447,7 +450,7 @@
 
       <!--темы -->
       <section class="sidebar_child topics">
-        <h2 class="topics_name_section"> Темы</h2>
+        <h2 class="sidebar_child_title topics_name_section"> Темы</h2>
         <ul class="topics_list list">
           <li class="topics_item">
             <a class="topics_link link" href="#0">Красота</a><span class="sup_text">12</span>
@@ -477,7 +480,8 @@
     <h2 class="shop_title">Наши изделия</h2>
     <div class="shop_articles">
       <!--Статья 1-->
-      <article class="shop_article">
+     <div class="shop_article_wrp">
+       <article class="shop_article">
         <!-- <img class="shop_img" src="img/shop-item-desk1.jpg" alt="Рассада">-->
         <picture class="shop_img">
           <source media="(max-width:360px)" srcset="img/shop-item-mobile1.jpg">
@@ -500,8 +504,10 @@
           </div>
         </div>
       </article>
+     </div>
 
       <!--Статья 2-->
+      <div class="shop_article_wrp">
       <article class="shop_article">
         <picture class="shop_img">
           <source media="(max-width:360px)" srcset="img/shop-item-mobile2.jpg">
@@ -525,8 +531,10 @@
           </div>
         </div>
       </article>
+      </div>
 
       <!--Статья 3-->
+      <div class="shop_article_wrp">
       <article class="shop_article">
         <picture class="shop_img">
           <source media="(max-width:360px)" srcset="img/shop-item-mobile3.jpg">
@@ -549,6 +557,7 @@
           </div>
         </div>
       </article>
+      </div>
 
     </div>
   </section>
@@ -598,7 +607,7 @@
 
     <!--Pop-up Кнопка для закрывания фрейма-->
     <button class="popup_close" type="button">
-      <svg class="popup_close_svg" viewBox="0 0 441 441" xmlns="http://www.w3.org/2000/svg">
+      <svg class="popup_close_image" viewBox="0 0 441 441" xmlns="http://www.w3.org/2000/svg">
         <path d="M220.336 170.564l.353.353.354-.353L390.288 1.318l49.796 49.773-169.269 169.245-.353.354.353.354 169.269 169.245-49.796 49.796-169.245-169.269-.354-.353-.353.353-169.27 169.269-49.748-49.796 169.245-169.245.353-.354-.353-.354L1.318 51.067 51.09 1.318l169.246 169.246z"/>
       </svg>
     </button>
@@ -613,18 +622,18 @@
     <ul class="socials list">
       <li class="social_item">
         <a class="social_link link" href="#0">
-          <img alt="Dribble" src="svg/001-dribbble.svg">
+          <img class="social_link_image" alt="Dribble" src="svg/001-dribbble.svg">
           <span class="visually_hidden">dribble</span>
         </a>
       </li>
       <li class="social_item">
         <a class="social_link link" href="#0">
-          <img alt="Pinterest" src="svg/001-pinterest.svg">
+          <img class="social_link_image" alt="Pinterest" src="svg/001-pinterest.svg">
           <span class="visually_hidden">pinterest</span></a>
       </li>
       <li class="social_item">
         <a class="social_link link" href="#0">
-          <img alt="Tumblr" src="svg/003-tumblr.svg">
+          <img class="social_link_image" alt="Tumblr" src="svg/003-tumblr.svg">
           <span class="visually_hidden">tumblr</span></a>
       </li>
     </ul>
@@ -637,5 +646,6 @@
     </address>
   </div>
 </footer>
+</div>
 </body>
 </html>

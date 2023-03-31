@@ -157,11 +157,11 @@
     cursor: pointer;
 }
 
-.popup_close:hover > .popup_close_svg {
+.popup_close:hover > .popup_close_image {
     stroke-width: 20;
 }
 
-.popup_close_svg {
+.popup_close_image {
     width: 19px;
     fill: #fff;
     stroke: #fff;
