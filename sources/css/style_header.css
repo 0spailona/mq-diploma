@@ -16,7 +16,7 @@
 }
 
 /*Фон баннера*/
-.header_background_img {
+.header_background_image {
     position: absolute;
     left: 0;
     top: 0;
@@ -55,7 +55,7 @@
     padding: 30px 15px 146px;
 }
 
-.wrp_logo_and_nav {
+.header_content_top_part {
     /*Позиционирование*/
     position: relative;
     right: 0;
@@ -73,7 +73,7 @@
     width: 180px;
 }
 
-.nav_wrp {
+.nav_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -114,11 +114,11 @@
     cursor: pointer;
 }
 
-#nav_burger:checked + .nav {
+.nav_burger_checkbox:checked + .nav {
     display: block;
 }
 
-.wrp_basetitle_and_logo {
+.header_content_central_part {
     max-width: 680px;
     margin: 125px auto 0 auto;
 }

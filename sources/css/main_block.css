@@ -1,21 +1,20 @@
 /* Посты и Sidebar */
 
 .main_block {
+    display: flex;
+    justify-content: space-between;
     max-width: 1200px;
 
     margin: auto;
-    padding: 64px 15px 84px;
-}
-
-.wrp_posts_and_aside {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-bottom: 64px;
+    padding: 64px 15px 64px;
 }
 
 /*Статьи.*/
 .posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 59px;
     max-width: 778px;
     flex: 1;
 }
@@ -35,10 +34,6 @@
     height: 3px;
 
     background-color: #eeeeee;
-}
-
-.post_bottom {
-    margin-bottom: 59px;
 }
 
 .post_preview {
@@ -63,7 +58,7 @@
     background-color: #eff6f1;
 }
 
-.post_img {
+.post_image {
     z-index: 4;
     width: 100%;
     min-height: 30px;
@@ -141,7 +136,9 @@
 /*Боковая панель*/
 .sidebar {
     position: relative;
-
+    display: flex;
+flex-direction: column;
+    gap: 60px;
     /*Блочная модель*/
     flex-shrink: 0;
     width: 272px;
@@ -149,9 +146,6 @@
     padding: 0 1px 1px 1px;
 }
 
-.sidebar_child:nth-child(n + 2) {
-    margin-top: 60px;
-}
 
 /*Последние посты*/
 .sidebar_child_title{
@@ -160,6 +154,11 @@
     text-transform: uppercase;
     color: #0f0d0e;
     font-weight: 700;
+}
+.last_posts{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 .last_posts_name_section {
     margin-bottom: 29px;
@@ -186,10 +185,6 @@
     padding-bottom: 1px;
 }
 
-.last_post_margin_top {
-    margin-top: 22px;
-}
-
 .last_post_preview {
     position: relative;
 
@@ -213,7 +208,7 @@
     background-color: #eff6f1;
 }
 
-.last_post_img {
+.last_post_image {
     z-index: 4;
     width: 100%;
     object-fit: contain;
@@ -266,7 +261,7 @@
     background-color: #b59f5b;
 }
 
-.search_button_svg {
+.search_button_image {
 
     fill: #fff;
     stroke: #B59F5B;

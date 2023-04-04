@@ -1,5 +1,5 @@
 
-.nav_wrp {
+.nav_wrapper {
     flex-direction: row-reverse;
 }
 
@@ -11,8 +11,12 @@
     display: none;
 }
 
+.header_content_central_part {
+    padding-right: 48px;
+    padding-left: 48px;
+}
+
 .basetitle {
-    max-width: 79%;
     font-size: 40px;
     line-height: 1.3;
 }
@@ -29,11 +33,20 @@
 
 .trends_articles {
     flex-wrap: wrap;
+    gap: 0;
 }
 
-.trends_article {
-    width: 40%;
+.trends_article_wrapper {
+    width: 50%;
     flex: auto;
+}
+
+.trends_article_margin_right {
+    padding-right: 4px;
+}
+
+.trends_article_margin_bottom {
+    padding-bottom: 4px;
 }
 
 .trends_article_name {
@@ -41,8 +54,12 @@
 }
 
 /*Посты*/
-.wrp_posts_and_aside {
+.main_block {
     padding-bottom: 50px;
+}
+
+.posts {
+    gap: 42px;
 }
 
 .post {
@@ -67,27 +84,36 @@
     display: block;
 }
 
-.post_bottom {
-    margin-bottom: 42px;
-}
 
 /* Наши изделия */
 .shop_articles {
     flex-wrap: wrap;
 }
 
-.shop_article_wrp {
-    width: 45%;
+.shop_container {
+    max-width: 50%;
+    flex: auto;
 }
 
-.shop_article_wrp:nth-child(n+3) {
-    margin-top: 42px;
+.shop_article_wrapper {
+    flex: auto;
 }
 
-.shop_article_wrp:nth-child(2n+2) {
-    margin-left: 45px;
+.shop_article_container_desktop_margin_right {
+    margin-right: 0;
 }
 
+.shop_article_wrapper_tablet_margin_right {
+    margin-right: 21px;
+}
+
+.shop_article_wrapper_tablet_margin_left {
+    margin-left: 21px;
+}
+
+.shop_article_wrapper_tablet_margin_bottom {
+    margin-bottom: 42px;
+}
 
 /* Popup */
 .popup_name {

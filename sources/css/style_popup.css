@@ -12,11 +12,9 @@
 
     background-color: rgba(0, 0, 0, 0.6);
     overflow-y: auto;
-
-
 }
 
-.popup__container {
+.popup_container {
     max-width: 392px;
     margin: auto;
     padding: 52px 25px 54px 25px;
@@ -67,7 +65,7 @@
     gap: 10px;
 }
 
-.select_and_arrow {
+.select_field {
     position: relative;
     height: 49px;
     flex: 1;
